@@ -41,13 +41,13 @@ const App = () => {
       <AnecdoteForm />
     
       {anecdotes.map(anecdote =>
-        <div key={anecdote.id}>
+        <div key={anecdote.id} style={{marginTop: 10}}>
           <div>
             {anecdote.content}
           </div>
           <div>
             has {anecdote.votes}
-            <button onClick={() => handleVote(anecdote)}>vote</button>
+            <button onClick={() => handleVote(anecdote)} style={{marginLeft: 5}}>vote</button>
           </div>
         </div>
       )}
